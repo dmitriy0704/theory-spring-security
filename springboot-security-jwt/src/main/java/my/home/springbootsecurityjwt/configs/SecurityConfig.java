@@ -31,9 +31,7 @@ public class SecurityConfig {
                 .cors((cors) -> cors.disable())
                 .authorizeHttpRequests(
                         (auth) -> auth
-                                .requestMatchers("/secured").authenticated()
-                                .requestMatchers("/secured/create-todo").authenticated()
-                                .requestMatchers("/info").authenticated()
+                                .requestMatchers("/secured").hasAnyRole("USER", "ADMIN")
                                 .requestMatchers("/admin").hasRole("ADMIN")
                                 .anyRequest().permitAll()
                 )
