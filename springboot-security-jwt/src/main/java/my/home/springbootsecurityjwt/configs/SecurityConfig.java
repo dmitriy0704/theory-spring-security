@@ -32,6 +32,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         (auth) -> auth
                                 .requestMatchers("/secured").authenticated()
+                                .requestMatchers("/secured/create-todo").authenticated()
                                 .requestMatchers("/info").authenticated()
                                 .requestMatchers("/admin").hasRole("ADMIN")
                                 .anyRequest().permitAll()
