@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -36,19 +37,24 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
-                .cors().disable()
-                .authorizeRequests()
-                .antMatchers("/secured").authenticated()
-                .antMatchers("/info").authenticated()
-                .antMatchers("/admin").hasRole("ADMIN")
-                .anyRequest().permitAll()
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .exceptionHandling()
-                .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
-                .and().addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+                .csrf(Customizer.withDefaults())
+                .cors(Customizer.withDefaults())
+                .authorizeHttpRequests(request -> request
+                        .requestMatchers("/secured").authenticated()
+                        .requestMatchers("/info").authenticated()
+                        .requestMatchers("/admin").hasRole("ADMIN")
+                        .anyRequest().permitAll()
+                )
+                .sessionManagement(
+                        session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+
+                )
+                .exceptionHandling(
+                        eh -> eh.authenticationEntryPoint(
+                                new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)
+                        )
+                )
+                .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 

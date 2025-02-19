@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import ru.flamexander.spring.security.jwt.entities.Role;
 
-import javax.persistence.*;
 import java.util.Collection;
 
 @Data

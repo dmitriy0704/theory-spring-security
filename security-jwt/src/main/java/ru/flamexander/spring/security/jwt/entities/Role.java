@@ -1,8 +1,8 @@
 package ru.flamexander.spring.security.jwt.entities;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.persistence.*;
 
 @Entity
 @Data
