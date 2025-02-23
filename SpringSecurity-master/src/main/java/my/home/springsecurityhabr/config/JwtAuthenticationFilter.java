@@ -1,4 +1,4 @@
-package ru.minusd.security.config;
+package my.home.springsecurityhabr.config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -14,8 +14,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import ru.minusd.security.service.JwtService;
-import ru.minusd.security.service.UserService;
+import my.home.springsecurityhabr.service.JwtService;
+import my.home.springsecurityhabr.service.UserService;
 
 import java.io.IOException;
 

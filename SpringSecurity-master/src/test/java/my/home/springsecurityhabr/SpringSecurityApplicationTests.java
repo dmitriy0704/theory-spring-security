@@ -1,4 +1,4 @@
-package ru.minusd.security;
+package my.home.springsecurityhabr;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

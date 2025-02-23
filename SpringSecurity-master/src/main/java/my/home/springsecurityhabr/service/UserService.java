@@ -1,9 +1,9 @@
-package my.home.springsecurityhabr.services;
+package my.home.springsecurityhabr.service;
 
 import lombok.RequiredArgsConstructor;
-import my.home.springsecurityhabr.entities.Role;
-import my.home.springsecurityhabr.entities.User;
-import my.home.springsecurityhabr.repo.UsersRepository;
+import my.home.springsecurityhabr.domain.model.Role;
+import my.home.springsecurityhabr.domain.model.User;
+import my.home.springsecurityhabr.repository.UserRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class UserService {
 
-    private final UsersRepository repository;
+    private final UserRepository repository;
 
     /**
      * Сохранение пользователя

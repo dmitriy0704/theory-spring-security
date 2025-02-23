@@ -1,8 +1,8 @@
-package ru.minusd.security.repository;
+package my.home.springsecurityhabr.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.minusd.security.domain.model.User;
+import my.home.springsecurityhabr.domain.model.User;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package ru.minusd.security.domain.model;
+package my.home.springsecurityhabr.domain.model;
 
 public enum Role {
     ROLE_USER,

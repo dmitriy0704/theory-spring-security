@@ -1,4 +1,4 @@
-package ru.minusd.security.service;
+package my.home.springsecurityhabr.service;
 
 
 import io.jsonwebtoken.Claims;
@@ -9,7 +9,7 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-import ru.minusd.security.domain.model.User;
+import my.home.springsecurityhabr.domain.model.User;
 
 import java.security.Key;
 import java.util.Date;

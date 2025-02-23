@@ -1,15 +1,15 @@
-package ru.minusd.security.service;
+package my.home.springsecurityhabr.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import ru.minusd.security.domain.dto.JwtAuthenticationResponse;
-import ru.minusd.security.domain.dto.SignInRequest;
-import ru.minusd.security.domain.dto.SignUpRequest;
-import ru.minusd.security.domain.model.Role;
-import ru.minusd.security.domain.model.User;
+import my.home.springsecurityhabr.domain.dto.JwtAuthenticationResponse;
+import my.home.springsecurityhabr.domain.dto.SignInRequest;
+import my.home.springsecurityhabr.domain.dto.SignUpRequest;
+import my.home.springsecurityhabr.domain.model.Role;
+import my.home.springsecurityhabr.domain.model.User;
 
 @Service
 @RequiredArgsConstructor

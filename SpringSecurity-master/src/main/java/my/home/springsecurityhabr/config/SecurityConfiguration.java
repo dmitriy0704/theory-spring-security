@@ -1,6 +1,7 @@
-package ru.minusd.security.config;
+package my.home.springsecurityhabr.config;
 
 import lombok.RequiredArgsConstructor;
+import my.home.springsecurityhabr.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,7 +17,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
-import ru.minusd.security.service.UserService;
 
 import java.util.List;
 

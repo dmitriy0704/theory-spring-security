@@ -1,4 +1,4 @@
-package ru.minusd.security.controller;
+package my.home.springsecurityhabr.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.minusd.security.domain.dto.JwtAuthenticationResponse;
-import ru.minusd.security.domain.dto.SignInRequest;
-import ru.minusd.security.domain.dto.SignUpRequest;
-import ru.minusd.security.service.AuthenticationService;
+import my.home.springsecurityhabr.domain.dto.JwtAuthenticationResponse;
+import my.home.springsecurityhabr.domain.dto.SignInRequest;
+import my.home.springsecurityhabr.domain.dto.SignUpRequest;
+import my.home.springsecurityhabr.service.AuthenticationService;
 
 @RestController
 @RequestMapping("/auth")
